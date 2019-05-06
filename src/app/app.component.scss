@@ -1,0 +1,32 @@
+.button-container {
+  display: flex;
+  justify-content: center;
+
+  button {
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 2px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background-color 0.15s linear;
+
+    &,
+    &:active,
+    &:focus {
+      background-color: #03a9f4;
+      outline: none;
+    }
+
+    &:hover {
+      background-color: #0288d1;
+      outline: none;
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}

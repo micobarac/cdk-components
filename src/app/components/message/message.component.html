@@ -1,0 +1,7 @@
+<div class="message-container" [ngClass]="options?.type" [@messageAnimation]="animationState"
+  (@messageAnimation.done)="animationDone()">
+  <span class="message">{{message}}</span>
+  <button class="close" (click)="animateClose()" *ngIf="options?.closable">
+    <i class="material-icons">close</i>
+  </button>
+</div>

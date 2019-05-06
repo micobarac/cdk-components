@@ -1,0 +1,81 @@
+@import '~@angular/cdk/overlay';
+@include cdk-overlay();
+
+$close-size: 26px;
+$close-offset: calc((#{$close-size} / 2) * -1);
+
+.message-container {
+  display: inline-flex;
+  border-radius: 6px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.25);
+  padding: 18px 24px;
+  align-items: center;
+  min-width: 300px;
+  box-sizing: border-box;
+
+  .message {
+    letter-spacing: 0.0625rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .close {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: $close-offset;
+    right: $close-offset;
+    cursor: pointer;
+    background: white;
+    border-radius: 50%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: $close-size;
+    height: $close-size;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    outline: none;
+
+    i {
+      font-size: 16px;
+    }
+  }
+
+  &.info {
+    background-color: white;
+
+    .message {
+      color: black;
+    }
+
+    .close {
+      background-color: #40445a;
+      color: white;
+    }
+  }
+
+  &.warning {
+    background-color: #ff6f00;
+
+    .message {
+      color: white;
+    }
+
+    .close {
+      color: #ff6f00;
+    }
+  }
+
+  &.error {
+    background-color: #b71c1c;
+
+    .message {
+      color: white;
+    }
+
+    .close {
+      color: #b71c1c;
+    }
+  }
+}
